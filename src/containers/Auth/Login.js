@@ -56,7 +56,7 @@ class Login extends Component {
             if (error.response) {
                 if (error.response.data) {
                     this.setState({
-                    errMessage: error.response.data.message
+                        errMessage: error.response.data.message
                     })
                 }
             }
