@@ -5,6 +5,8 @@ import logo from '../../assets/images/logo.svg'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils';
 import { changeLanguageApp } from '../../store/actions';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; 
 
 class HomeHeader extends Component {
 
