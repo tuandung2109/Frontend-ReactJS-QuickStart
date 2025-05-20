@@ -1,33 +1,33 @@
 import actionTypes from '../actions/actionTypes';
 
 const initialState = {
-    isLoggedIn: false,
-    adminInfo: null
+    genders: [],
+    roles: [],
+    positions: []
 }
 
-const appReducer = (state = initialState, action) => {
+const adminReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.ADMIN_LOGIN_SUCCESS:
+        case actionTypes.FETCH_GENDER_START:
+            console.log('tuandung fire fetch gender start' , action);
+            
             return {
-                ...state,
-                isLoggedIn: true,
-                adminInfo: action.adminInfo
+                ...state
             }
-        case actionTypes.ADMIN_LOGIN_FAIL:
+        case actionTypes.FETCH_GENDER_SUCCESS:
+            console.log('tuandung fire fetch gender success' , action);
             return {
-                ...state,
-                isLoggedIn: false,
-                adminInfo: null
+                ...state
             }
-        case actionTypes.PROCESS_LOGOUT:
+        case actionTypes.FETCH_GENDER_FAILED:
+            console.log('tuandung fire fetch gender failed' , action);
             return {
-                ...state,
-                isLoggedIn: false,
-                adminInfo: null
+                ...state
             }
+
         default:
             return state;
     }
 }
 
-export default appReducer;
+export default adminReducer;
