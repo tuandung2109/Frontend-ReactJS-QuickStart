@@ -15,9 +15,11 @@ const adminReducer = (state = initialState, action) => {
                 ...state
             }
         case actionTypes.FETCH_GENDER_SUCCESS:
-            console.log('tuandung fire fetch gender success' , action);
+            let copyState = {...state};
+            copyState.genders = action.data;
+            console.log('tuandung fire fetch gender success' , copyState);
             return {
-                ...state
+                ...copyState
             }
         case actionTypes.FETCH_GENDER_FAILED:
             console.log('tuandung fire fetch gender failed' , action);
