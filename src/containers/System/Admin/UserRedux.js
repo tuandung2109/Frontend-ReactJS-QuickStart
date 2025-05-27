@@ -30,7 +30,7 @@ class UserRedux extends Component {
             role: "",
             avatar: "",
             action: "",
-            userEditId: '',
+            userEditId: "",
 
         }
     }
@@ -140,7 +140,7 @@ class UserRedux extends Component {
                 address: this.state.address,
                 phonenumber: this.state.phoneNumber,
                 gender: this.state.gender,
-                roleID: this.state.role,
+                roleId: this.state.role,
                 positionId: this.state.position,
                 // avatar: this.state.avatar
             })
@@ -175,7 +175,7 @@ class UserRedux extends Component {
             password: 'HARDCODE',
             firstName: user.firstName,
             lastName: user.lastName,
-            phoneNumber: user.phoneNumber,
+            phoneNumber: user.phonenumber || '' ,
             address: user.address,
             gender: user.gender,
             role: user.roleId,
