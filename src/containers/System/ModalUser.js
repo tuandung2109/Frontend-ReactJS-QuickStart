@@ -14,7 +14,8 @@ class ModalUser extends Component {
             password: '',
             firstName: '',
             lastName: '',
-            address: ''
+            address: '',
+            roleId: ''
         }
         this.listenToEmitter(); 
     }
@@ -59,7 +60,7 @@ class ModalUser extends Component {
 
     checkValidInput = () => {
         let isValid = true;
-        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
+        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address' , 'roleId'];
             for (let i = 0; i < arrInput.length; i++) {
                 if (!this.state[arrInput[i]]) {
                     isValid = false;
